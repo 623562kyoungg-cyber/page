@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정밀 센싱 상세 | 로봇 인사이트</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 페이지 진입 애니메이션 */
+        body {
+            opacity: 0;
+            animation: fadeInPage 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInPage {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header" style="background-color: var(--color-bg-white); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+        <div class="header-inner">
+            <a href="index.html" class="logo">로봇 인사이트</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#service-1">정밀 센싱</a></li>
+                    <li><a href="index.html#service-2">AI 시너지</a></li>
+                    <li><a href="index.html#stats">인사이트 데이터</a></li>
+                    <li><a href="index.html#qna">전문가 상담</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--header-height);">
+        <!-- Detail Hero Section -->
+        <section class="feature-section bg-gray" style="padding-top: 100px; padding-bottom: 100px;">
+            <div class="container" style="text-align: center; max-width: 800px;">
+                <div class="badge">SENSING TECH DETAIL</div>
+                <h1 style="font-size: 4rem; margin-bottom: 24px; font-weight: 800; letter-spacing: -0.05em;">혁신적인 감각,<br>정밀 센싱 솔루션</h1>
+                <p style="font-size: 1.25rem; color: var(--color-text-gray); margin-bottom: 40px; word-break: keep-all;">
+                    로봇이 세상을 온전히 이해하는 첫 번째 단계. 초정밀 라이다(LiDAR)와 3D 비전 카메라가 결합되어 한 치의 오차도 허용하지 않는 완벽한 자율주행을 완성합니다.
+                </p>
+                <a href="index.html" class="btn btn-secondary" style="margin-right: 10px;">이전 화면으로</a>
+                <a href="index.html#qna" class="btn btn-primary">솔루션 도입 문의</a>
+            </div>
+        </section>
+        
+        <!-- Detail Content Section -->
+        <section class="feature-section" style="padding: 100px 0;">
+            <div class="container">
+                <div class="visual-card" style="height: auto; min-height: 400px; flex-direction: column; text-align: center; box-shadow: 0 12px 36px rgba(0,0,0,0.06);">
+                    <img src="vision.png" alt="센서" style="max-height: 200px; margin-bottom: 30px;">
+                    <h2>압도적인 인식률 99.9%</h2>
+                    <p style="color: var(--color-text-gray); margin-top: 15px;">어떠한 환경에서도 장애물을 인지하고 회피하는 독보적인 센싱 기술의 상세 스펙이 안내되는 페이지입니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">로봇 인사이트</div>
+                <div class="copyright">&copy; 2024 Robot Insight Corp.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

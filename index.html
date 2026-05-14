@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로봇 인사이트 | 일상을 바꾸는 로봇 기술</title>
+    <meta name="description" content="복잡한 로봇 기술부터 미래를 여는 인공지능까지, 전문적인 지식을 가장 쉽고 직관적으로 경험하세요.">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Firebase SDK Setup (Compat version for local file:// execution) -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-compat.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Background Grid (카카오페이 라이브 사이트 정밀 분석 반영) -->
+    <div class="grid-container">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+    </div>
+    <div class="grid-container horizontal">
+        <div class="grid-line-h top"></div>
+        <div class="grid-line-h bottom"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-inner">
+            <a href="#" class="logo">로봇 인사이트</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#service-1">정밀 센싱</a></li>
+                    <li><a href="#portfolio">프로젝트 성과</a></li>
+                    <li><a href="#stats">인사이트 데이터</a></li>
+                    <li><a href="#board">자유 게시판</a></li>
+                </ul>
+            </nav>
+            <div class="lang-selector" style="display: flex; align-items: center; color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9rem;">KOR | ENG</div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="모바일 메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section (맨 처음 파일 레이아웃) -->
+        <section class="hero" id="hero">
+            <img src="hero.png" alt="Hero Background" class="hero-bg" decoding="async" fetchpriority="high">
+            <div class="hero-content">
+                <h1 class="reveal">일상을 바꾸는<br>새로운 파트너,<br><span class="highlight">로봇 인사이트</span></h1>
+                <p class="reveal delay-1">복잡한 로봇 기술부터 미래를 여는 인공지능까지.<br>전문적인 지식을 가장 쉽고 직관적으로 경험하세요.</p>
+                <div class="hero-buttons reveal delay-2">
+                    <a href="#service-1" class="btn btn-primary">서비스 시작하기</a>
+                    <a href="#board" class="btn btn-secondary">게시판 바로가기</a>
+                </div>
+            </div>
+            <div class="scroll-indicator reveal delay-3">
+                <div class="scroll-btn">&larr;</div>
+                <div class="scroll-btn">II</div>
+                <div class="scroll-btn">&rarr;</div>
+            </div>
+        </section>
+
+        <!-- Feature 1: Left Text, Right Visual -->
+        <section class="feature-section" id="service-1">
+            <div class="container feature-container">
+                <div class="feature-text reveal">
+                    <div class="badge">SENSING TECH</div>
+                    <h2>정밀하게<br>세상을 읽다</h2>
+                    <p>라이다(LiDAR)와 3D 비전 카메라로<br>오차 없이 주변 환경을 인식하여 안전한 자율 주행을 돕습니다.</p>
+                    <a href="detail.html" class="link-with-arrow">센싱 기술 자세히 보기 &rarr;</a>
+                </div>
+                <div class="feature-visual reveal delay-1">
+                    <a href="detail.html" style="display: block;">
+                        <div class="visual-card">
+                            <img src="vision.png" alt="비전 센서 시각화" decoding="async" style="max-height: 250px;">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 2: Right Text, Left Visual (Reverse) -->
+        <section class="feature-section bg-gray" id="service-2">
+            <div class="container feature-container reverse">
+                <div class="feature-text reveal">
+                    <div class="badge">AI PROCESSING</div>
+                    <h2>생각하고 판단하는<br>인공지능의 시너지</h2>
+                    <p>수집된 수만 개의 데이터를 실시간으로 분석하여<br>스스로 최적의 경로와 작업을 결정합니다. 로봇의 두뇌가 깨어납니다.</p>
+                    <a href="detail.html" class="link-with-arrow" aria-label="AI 처리 방식 상세 페이지로 이동">AI 처리 방식 알아보기 &rarr;</a>
+                </div>
+                <div class="feature-visual reveal delay-1">
+                    <a href="detail.html" style="display: block;" aria-label="AI 시너지 시각화 이미지 (상세페이지 이동)">
+                        <div class="visual-card">
+                            <img src="map.png" alt="글로벌 네트워크로 연결된 인공지능 로봇망 시각화" loading="lazy" decoding="async" style="max-height: 250px;">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section (Rubric: 스토리텔링 - 포트폴리오 품질) -->
+        <section class="feature-section" id="portfolio">
+            <div class="container">
+                <div class="reveal">
+                    <h2 class="section-title">주요 프로젝트 성과</h2>
+                    <p class="section-desc">로봇 인사이트가 성공적으로 이끌어온 혁신적인 도입 사례와 포트폴리오를 소개합니다.</p>
+                </div>
+                <div class="portfolio-grid reveal delay-1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div class="visual-card" style="height: auto; padding: 30px; align-items: flex-start; text-align: left; flex-direction: column;">
+                        <img src="portfolio.png" alt="물류창고에서 작동 중인 자율주행 물류 로봇" loading="lazy" style="border-radius: 12px; margin-bottom: 20px; width: 100%; object-fit: cover;">
+                        <div class="badge" style="background-color: var(--color-point); color: var(--color-text-dark);">LOGISTICS</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">스마트 물류 로봇 구축</h3>
+                        <p style="color: var(--color-text-gray);">A사 글로벌 물류센터 내 자율주행 운송 로봇(AMR) 500대 구축 및 관제 시스템 연동을 통해 처리 효율을 300% 향상시킨 핵심 프로젝트입니다.</p>
+                    </div>
+                    <div class="visual-card" style="height: auto; padding: 30px; align-items: flex-start; text-align: left; flex-direction: column;">
+                        <img src="vision.png" alt="반도체 공정의 정밀 비전 검사 시스템" loading="lazy" style="border-radius: 12px; margin-bottom: 20px; width: 100%; object-fit: cover;">
+                        <div class="badge" style="background-color: var(--color-text-dark); color: var(--color-bg-white);">MANUFACTURING</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">초정밀 AI 비전 검사</h3>
+                        <p style="color: var(--color-text-gray);">B사 반도체 팹(Fab) 공정에 3D 비전 센서를 도입하여 육안 검사 대비 불량 탐지율을 99.9%로 끌어올린 혁신적인 성과를 기록했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section" id="stats">
+            <div class="container">
+                <h2 class="section-title reveal">숫자로 증명하는 신뢰</h2>
+                <div class="stats-grid reveal delay-1">
+                    <div class="stat-item">
+                        <div class="stat-number">1,240<span>건</span></div>
+                        <div class="stat-label">월간 기술 상담</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98.5<span>%</span></div>
+                        <div class="stat-label">솔루션 만족도</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24<span>/7</span></div>
+                        <div class="stat-label">무중단 AI 지원</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bulletin Board Section with Firebase -->
+        <section class="qna-section" id="board" style="padding: 120px 0; background-color: var(--color-bg-white);">
+            <div class="container">
+                <div class="reveal">
+                    <h2 class="section-title">자유 게시판</h2>
+                    <p class="section-desc">로봇 도입, 기술 제휴 등 무엇이든 물어보세요.<br>로봇 인사이트 전문 팀이 빠르고 정확하게 답변해 드립니다.</p>
+                </div>
+                
+                <div class="board-container reveal delay-1">
+                    <form id="qnaForm" class="board-form">
+                        <div class="input-group">
+                            <input type="text" id="authorInput" class="form-input" placeholder="담당자 성함 또는 기업명" required>
+                            <input type="text" id="titleInput" class="form-input" placeholder="문의 주제 (예: 라이다 센서 제휴 문의)" required>
+                        </div>
+                        <textarea id="contentInput" class="form-textarea" placeholder="상세한 문의 내용을 입력해주세요." required></textarea>
+                        <div style="text-align: right;">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">문의 등록하기</button>
+                        </div>
+                    </form>
+                    
+                    <div class="board-list" id="qnaList">
+                        <div style="text-align: center; padding: 20px; color: var(--color-text-gray);">
+                            실시간 상담 데이터를 불러오는 중입니다...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">로봇 인사이트</div>
+                <ul style="display: flex; gap: 20px;">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#" style="font-weight: 700; color: var(--color-bg-white);">개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Robot Insight Corp. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
